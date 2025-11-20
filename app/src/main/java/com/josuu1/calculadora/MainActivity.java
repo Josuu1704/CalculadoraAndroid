@@ -10,6 +10,11 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -23,19 +28,27 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        Button button1, button2, button3, button4, button5, button6, button7, button8, button9, button0;
-
-        button1 = findViewById(R.id.ButtonOne);
-        button2 = findViewById(R.id.ButtonTwo);
-        button3 = findViewById(R.id.ButtonThree);
-        button4 = findViewById(R.id.ButtonFour);
-        button5 = findViewById(R.id.ButtonFive);
-        button6 = findViewById(R.id.ButtonSix);
-        button7 = findViewById(R.id.ButtonSeven);
-        button8 = findViewById(R.id.ButtonEight);
-        button9 = findViewById(R.id.ButtonNine);
-        button0 = findViewById(R.id.ButtonCero);
-
+        List<Button> BotonesNumeros = new ArrayList<>(Arrays.asList(
+           findViewById(R.id.ButtonOne),
+           findViewById(R.id.ButtonTwo),
+           findViewById(R.id.ButtonThree),
+           findViewById(R.id.ButtonFour),
+           findViewById(R.id.ButtonFive),
+           findViewById(R.id.ButtonSix),
+           findViewById(R.id.ButtonSeven),
+           findViewById(R.id.ButtonEight),
+           findViewById(R.id.ButtonNine),
+           findViewById(R.id.ButtonCero)
+        ));
+        List<Button> BotonesOperation = new ArrayList<>(Arrays.asList(
+                findViewById(R.id.ButtonSuma),
+                findViewById(R.id.ButtonResta),
+                findViewById(R.id.ButtonDivision),
+                findViewById(R.id.ButtonMultiplicacion),
+                findViewById(R.id.ButtonPorcentaje),
+                findViewById(R.id.ButtonIgual),
+                findViewById(R.id.ButtonNegativo)
+        ));
         //Button.OnClickListener(new View.OnClickListener(){
 
         };
